@@ -21,3 +21,4 @@ class imgStruct:
 		self.textBoxColor = ""
 		self.nameColor = ""
 		self.nameBoxColor = ""
+		self.cardType = cardType

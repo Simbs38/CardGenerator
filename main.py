@@ -1,11 +1,15 @@
 from InfoParse import InfoParse as IP
+from imgText import ImgText as IT
+import cv2
 import sys
 
-def parseImage(imageData):
+def parseImage(imageData, imgPath, outputPath):
 	#parseColor
-	#parseText
+	#insert stuffs
 
-	pass
+	card = cv2.imread(imgPath)
+	card = IT.InsertText(imageData, card)
+	cv2.imwrite(outputPath, card)
 
 
 def main():
@@ -29,9 +33,11 @@ def main():
 	
 	cardsList = IP.ParseExcel(cardsToMake)
 
+	i = 0
+
 	for x in cardsList:
-		parseImage(x)
-		pass
+		parseImage(x, "rcs/" + x.cardType + ".png", "outputs/" + x.cardType + "/" + str(i) + ".png")
+		i = i + 1
 
 if __name__ == "__main__":
 	main()
