@@ -1,5 +1,7 @@
+from imgStruct import imgStruct as IS
+import pandas as pd
 
-
+excelFilePath = "rcs/test.py"
 
 class InfoParse:
 
@@ -7,7 +9,16 @@ class InfoParse:
 		pass
 
 	@staticmethod
-	def ParseExcel():
+	def ParseExcel(cards):
 		print("parsing e tudo")
+		xls = pd.ExcelFile(excelFilePath)
+
+
+		for card in cards:
+			page = xls.read_excel(xls, card)
+
+
+
+
 
 		return []

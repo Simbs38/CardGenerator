@@ -1,8 +1,10 @@
-from imgStruct import imgStruct as IS
 from InfoParse import InfoParse as IP
 import sys
 
 def parseImage(imageData):
+	#parseColor
+	#parseText
+
 	pass
 
 
@@ -25,8 +27,8 @@ def main():
 	else:
 		print("Unknown case")
 	
-	cardsList = IP.ParseExcel()
-	
+	cardsList = IP.ParseExcel(cardsToMake)
+
 	for x in cardsList:
 		parseImage(x)
 		pass
