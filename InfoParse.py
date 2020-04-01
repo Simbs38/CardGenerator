@@ -1,7 +1,8 @@
 from imgStruct import imgStruct as IS
 import pandas as pd
 
-excelFilePath = "rcs/test.xlsx"
+#excelFilePath = "rcs/test.xlsx"
+excelFilePath = "rcs/Cards.xlsx"
 
 class InfoParse:
 
