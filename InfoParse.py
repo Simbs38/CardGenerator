@@ -1,4 +1,5 @@
-from imgStruct import imgStruct as IS
+from Structs import imgStruct as IS
+from Structs import Pallete
 import pandas as pd
 
 #excelFilePath = "rcs/test.xlsx"
@@ -38,9 +39,33 @@ class InfoParse:
 						imgStruct.type = page[item][i]
 					elif(tmpType == "Unnamed: 0"):
 						pass
-					else:
-						print("forgoton: " + tmpType)
 
 				ans.append(imgStruct)
+
+		return ans
+
+	@staticmethod
+	def ParseColors():
+		xls = pd.ExcelFile(excelFilePath)
+		ans = {}
+		page = pd.read_excel(xls, "pallete")
+
+		for i in page.index:
+			colorStruct = Pallete()
+			for item in page.columns:
+				tmpType = page[item].head(0).name
+
+				if(tmpType == "name"):
+					colorStruct.name = page[item][i]
+				elif(tmpType == "TextBackground"):
+					colorStruct.TextBackground = colorStruct.ParseColor(page[item][i])
+				elif(tmpType == "NameFieldColor"):
+					colorStruct.NameField = colorStruct.ParseColor(page[item][i])
+				elif(tmpType == "BorderColor"):
+					colorStruct.Border = colorStruct.ParseColor(page[item][i])
+				elif(tmpType == "BackgroundColor"):
+					colorStruct.Background = colorStruct.ParseColor(page[item][i])
+
+			ans[colorStruct.name] = colorStruct
 
 		return ans

@@ -27,8 +27,7 @@ class ImgIcon:
                 colors.append(self.green)
             elif(r.lower() == 'p'):
                 colors.append(self.purple)
-            else:
-                print(r.lower() == 'r')
+
         return(colors)
 
         

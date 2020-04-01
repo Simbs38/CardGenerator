@@ -17,10 +17,8 @@ def unique(list1):
       
     # traverse for all elements 
     for x in list1: 
-        print('123')
         # check if exists in unique_list or not 
         if x not in unique_list: 
-            print('456')
             unique_list.append(x) 
     # print list 
     return(unique_list)

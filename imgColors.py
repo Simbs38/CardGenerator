@@ -9,31 +9,27 @@ class ImgColors:
 		pass
 
 	@staticmethod
-	def ColorCard(cardInfo, card):
-		pallete = Palletes.GetBluePallete()
-		
+	def ColorCard(cardInfo, card, pallete):
 		if(path.exists("rcs/ " + cardInfo.cardType + "_" + pallete.name + ".png")):
 			return cv2.imread("rcs/ " + cardInfo.cardType + "_" + pallete.name + ".png")
 		
 		colors = ImgColors.GetAllColors(card)
-		print("colors: " + str(len(colors)))
-
 		colorBase = colors[0][0]
 		colorTextContainer = colors[1][0]
 		colorBorder = colors[2][0]
 		
-		card = ImgColors.PaintColor(card, colorBase, pallete.baseColor)
-		card = ImgColors.PaintColor(card, colorTextContainer, pallete.textContainerColor)
-		card = ImgColors.PaintColor(card, colorBorder, pallete.borderColor)
+		card = ImgColors.PaintColor(card, colorBase, pallete.Background)
+		card = ImgColors.PaintColor(card, colorTextContainer, pallete.TextBackground)
+		card = ImgColors.PaintColor(card, colorBorder, pallete.Border)
 
 		colorName = colors[3]
 		colorBanner = colors[4]
 		
 		if(cardInfo.cardType != "events"):
-			card = ImgColors.PaintColor(card, colorName[0], pallete.nameContainerColor)
+			card = ImgColors.PaintColor(card, colorName[0], pallete.NameField)
 			colors.remove(colorName)
 			if(cardInfo.cardType == "tunos"):
-				card = ImgColors.PaintColor(card, colorBanner[0], pallete.bannerColor)
+				card = ImgColors.PaintColor(card, colorBanner[0], (0,0,0))
 				colors.remove(colorBanner)
 
 		cv2.imwrite("rcs/ " + cardInfo.cardType + "_" + pallete.name + ".png", card)
