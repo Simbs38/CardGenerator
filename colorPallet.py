@@ -12,5 +12,6 @@ class Palletes:
 		ans.borderColor = (120,0,0)
 		ans.nameContainerColor = (90,0,0)
 		ans.bannerColor = (50,0,0)
+		ans.name = "blue"
 
 		return ans

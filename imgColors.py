@@ -1,6 +1,7 @@
 import operator
 from colorPallet import Palletes
-
+from os import path
+import cv2
 
 class ImgColors:
 
@@ -9,8 +10,12 @@ class ImgColors:
 
 	@staticmethod
 	def ColorCard(cardInfo, card):
-		colors = ImgColors.GetAllColors(card)
 		pallete = Palletes.GetBluePallete()
+		
+		if(path.exists("rcs/ " + cardInfo.cardType + "_" + pallete.name + ".png")):
+			return cv2.imread("rcs/ " + cardInfo.cardType + "_" + pallete.name + ".png")
+		
+		colors = ImgColors.GetAllColors(card)
 		print("colors: " + str(len(colors)))
 
 		colorBase = colors[0][0]
@@ -30,6 +35,8 @@ class ImgColors:
 			if(cardInfo.cardType == "tunos"):
 				card = ImgColors.PaintColor(card, colorBanner[0], pallete.bannerColor)
 				colors.remove(colorBanner)
+
+		cv2.imwrite("rcs/ " + cardInfo.cardType + "_" + pallete.name + ".png", card)
 
 		return card
 

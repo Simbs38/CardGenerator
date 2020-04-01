@@ -1,23 +1,22 @@
 from InfoParse import InfoParse as IP
 from imgText import ImgText as IT
 from imgColors import ImgColors as IC
-from ImgIcon import ImgIcon as IC
+from ImgIcon import ImgIcon as II
 import cv2
 import sys
 
 def parseImage(imageData, imgPath, outputPath):
-    tmp = IC()
+	tmp = II()
 	card = cv2.imread(imgPath)
 	card = IC.ColorCard(imageData, card)
 	card = IT.InsertText(imageData, card)
 
-	if imageData.cardType == 'tunos':
-        IC.build_cubes(tmp.translate_colors(imageData.requirements),INPUT_DIR = outputPath)
-    elif imageData.cardType == 'events':
-        IC.build_cubes(tmp.translate_colors(imageData.requirements), 1500, 220,INPUT_DIR = outputPath)
-
 	cv2.imwrite(outputPath, card)
-	
+
+	if imageData.cardType == 'tunos':
+		II.build_cubes(tmp.translate_colors(imageData.requirements), INPUT_DIR = outputPath)
+	elif imageData.cardType == 'events':
+		II.build_cubes(tmp.translate_colors(imageData.requirements), 1500, 220, INPUT_DIR = outputPath)
 
 def main():
 	cardsToMake = []
