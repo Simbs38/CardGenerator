@@ -27,13 +27,12 @@ class ImgIcon:
                 colors.append(self.green)
             elif(r.lower() == 'p'):
                 colors.append(self.purple)
-            else:
-                print(r.lower() == 'r')
+
         return(colors)
 
         
     @staticmethod
-    def build_cubes(cubes,weight = 80, width=120,INPUT_DIR = "../rcs/"):
+    def build_cubes(cubes,weight = 80, width=120,INPUT_DIR = "rcs/"):
     ## https://www.geeksforgeeks.org/python-pil-image-resize-method/
         background = Image.open(INPUT_DIR)
         # resize the image

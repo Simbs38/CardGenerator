@@ -1,22 +1,21 @@
 from InfoParse import InfoParse as IP
 from imgText import ImgText as IT
-from ImgIcon import ImgIcon as IC
+from imgColors import ImgColors as IC
+from ImgIcon import ImgIcon as II
 import cv2
 import sys
 
-def parseImage(imageData, imgPath, outputPath):
-	#parseColor
-	#insert stuffs
-    tmp = IC()
-    card = cv2.imread(imgPath)
-    card = IT.InsertText(imageData, card)
-    cv2.imwrite(outputPath, card)
-    #print(tmp.translate_colors(imageData.requirements))
-    if imageData.cardType == 'tunos':
-        IC.build_cubes(tmp.translate_colors(imageData.requirements),INPUT_DIR = outputPath)
-    elif imageData.cardType == 'events':
-        IC.build_cubes(tmp.translate_colors(imageData.requirements), 1560, 120, INPUT_DIR = outputPath)
+def parseImage(imageData, imgPath, outputPath, pallete):
+	tmp = II()
+	card = cv2.imread(imgPath)
+	card = IC.ColorCard(imageData, card, pallete)
+	card = IT.InsertText(imageData, card)
+	cv2.imwrite(outputPath, card)
 
+	if imageData.cardType == 'tunos':
+		II.build_cubes(tmp.translate_colors(imageData.requirements), INPUT_DIR = outputPath)
+	elif imageData.cardType == 'events':
+		II.build_cubes(tmp.translate_colors(imageData.requirements), 1500, 220, INPUT_DIR = outputPath)
 
 def main():
 	cardsToMake = []
@@ -37,12 +36,13 @@ def main():
 	else:
 		print("Unknown case")
 	
+	palletes = IP.ParseColors()
 	cardsList = IP.ParseExcel(cardsToMake)
 
 	i = 0
 
 	for x in cardsList:
-		parseImage(x, "rcs/" + x.cardType + ".png", "outputs/" + x.cardType + "/" + str(i) + ".png")
+		parseImage(x, "rcs/" + x.cardType + ".png", "outputs/" + x.cardType + "/" + str(i) + ".png", palletes[x.pallete])
 		i = i + 1
 
 if __name__ == "__main__":
