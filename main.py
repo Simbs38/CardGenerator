@@ -1,15 +1,17 @@
 from InfoParse import InfoParse as IP
 from imgText import ImgText as IT
+from imgColors import ImgColors as IC
 import cv2
 import sys
 
 def parseImage(imageData, imgPath, outputPath):
-	#parseColor
-	#insert stuffs
-
 	card = cv2.imread(imgPath)
+	card = IC.ColorCard(imageData, card)
 	card = IT.InsertText(imageData, card)
 	cv2.imwrite(outputPath, card)
+	
+	#insert stuffs
+
 
 
 def main():
