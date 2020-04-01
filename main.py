@@ -15,7 +15,7 @@ def parseImage(imageData, imgPath, outputPath):
     if imageData.cardType == 'tunos':
         IC.build_cubes(tmp.translate_colors(imageData.requirements),INPUT_DIR = outputPath)
     elif imageData.cardType == 'events':
-        IC.build_cubes(tmp.translate_colors(imageData.requirements), 1500, 220,INPUT_DIR = outputPath)
+        IC.build_cubes(tmp.translate_colors(imageData.requirements), 1560, 120, INPUT_DIR = outputPath)
 
 
 def main():
