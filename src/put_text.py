@@ -57,7 +57,7 @@ def prepare_cubes(file_name, colors, INPUT_DIR = "../input/images/"):
          save_image(im,'cube_s{}_{}_{}.png'.format(color['B'],color['G'],color['R']))
          
 """ cubes = [blue, blue, red, green] """         
-def build_cubes(cubes, card_name, INPUT_DIR = "../rcs/"):
+def build_cubes(cubes, card_name, INPUT_DIR = "../input/images/", OUTPUT_DIR = "../output/"):
     ## https://www.geeksforgeeks.org/python-pil-image-resize-method/
     background = Image.open(INPUT_DIR + card_name)
     # resize the image
@@ -69,7 +69,7 @@ def build_cubes(cubes, card_name, INPUT_DIR = "../rcs/"):
     x0,dx = 80, 40
     for i,cube in list(enumerate(cubes)):
         ii = i
-        img = Image.open(OUTPUT_DIR  + 'cube_{}_{}_{}.png'.format(cube['B'],cube['G'],cube['R']))
+        img = Image.open(OUTPUT_DIR  + 'cube_s{}_{}_{}.png'.format(cube['B'],cube['G'],cube['R']))
         new_size = (80,80)
         img = img.resize(new_size)
         if(i > 1 & i%2==0):

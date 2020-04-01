@@ -1,15 +1,21 @@
 from InfoParse import InfoParse as IP
 from imgText import ImgText as IT
+from ImgIcon import ImgIcon as IC
 import cv2
 import sys
 
 def parseImage(imageData, imgPath, outputPath):
 	#parseColor
 	#insert stuffs
-
-	card = cv2.imread(imgPath)
-	card = IT.InsertText(imageData, card)
-	cv2.imwrite(outputPath, card)
+    tmp = IC()
+    card = cv2.imread(imgPath)
+    card = IT.InsertText(imageData, card)
+    cv2.imwrite(outputPath, card)
+    #print(tmp.translate_colors(imageData.requirements))
+    if imageData.cardType == 'tunos':
+        IC.build_cubes(tmp.translate_colors(imageData.requirements),INPUT_DIR = outputPath)
+    elif imageData.cardType == 'events':
+        IC.build_cubes(tmp.translate_colors(imageData.requirements), 1500, 220,INPUT_DIR = outputPath)
 
 
 def main():
@@ -41,4 +47,3 @@ def main():
 
 if __name__ == "__main__":
 	main()
-
