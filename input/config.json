@@ -1,0 +1,144 @@
+{
+	"Data": "input/data.xlsx",
+	"CardsName": "Title, Id",
+	"ImageFolder" : "input/images/",
+	"TextStandart" :{
+		"Offset-X" : 0,
+		"Offset-Y" : 0,
+		"Font-Size" : 45,
+		"Font-Color" : "rgb(0, 0, 0)",
+		"Line-Length" : 35,
+		"Line-Spacing": 10
+	},
+	"ImageStandart": {
+		"Offset-X" : 0,
+		"Offset-Y" : 0
+	},
+	"GroupStandart":{
+		"Center-x": 200,
+		"Center-y": 200,
+		"Direction" : "Hor",
+		"Padding" : 10
+	},
+	"CardsToGenerate":[
+		"Events",
+		"Items",
+		"Other"
+	],
+	"Events": {
+		"Title": "OutPut/Events/Event ",
+		"BaseImage" : "BaseName",
+		"Cols" :
+		[
+			"Id",
+			"Name",
+			"Voice Stat",
+			"Inst Stat",
+			"Show Stat",
+			"Prestige",
+			"Money",
+			"Diamond",
+			"BaseName"
+		],
+		"Name" : {
+			"Type" : "Text",
+			"Offset-X" : 100,
+			"Offset-Y" : 1220,
+			"Font" : "input/Verdana.ttf"
+		},
+		"Voice Stat" : {
+			"Type" : "Text",
+			"Offset-X" : 350,
+			"Offset-Y" : 1500,
+			"Font" : "input/Verdana.ttf",
+			"Font-Size": 100
+		},
+		"Inst Stat" : {
+			"Type" : "Text",
+			"Offset-X" : 610,
+			"Offset-Y" : 1500,
+			"Font" : "input/Verdana.ttf",
+			"Font-Size": 100
+		},
+		"Show Stat" : {
+			"Type" : "Text",
+			"Offset-X" : 850,
+			"Offset-Y" : 1500,
+			"Font" : "input/Verdana.ttf",
+			"Font-Size": 100
+		},
+		"Prestige" : {
+			"Type" : "Img"
+		},
+		"Money" : {
+			"Type" : "Img",
+			"Size-X" : 400,
+			"Size-Y" : 400,
+			"Offset-X" : 850,
+			"Offset-Y" : 1025
+		},
+		"Diamond" : {
+			"Type" : "Img",
+			"Size-X" : 400,
+			"Size-Y" : 400,
+			"Offset-X" : 750,
+			"Offset-Y" : 1050
+		},
+		"Prestige" : {
+			"Type" : "Img"
+		}
+	},
+	"Items": {
+		"Title": "OutPut/Items/Items ",
+		"BaseImage" : "BaseName",
+		"Cols" :[
+			"Id",
+			"Name",
+			"Info",
+			"Price",
+			"BaseName"],
+		"Name" : {
+			"Type" : "Text",
+			"Offset-X" : 100,
+			"Offset-Y" : 1270,
+			"Font" : "input/Verdana.ttf"
+		},
+		"Info" : {
+			"Type" : "Text",
+			"Offset-X" : 100,
+			"Offset-Y" : 1450,
+			"Line-Length" : 25,
+			"Line-Spacing" : 10,
+			"Font" : "input/Verdana.ttf"
+		},
+		"Price" : {
+			"Type" : "Img",
+			"Size-X" : 400,
+			"Size-Y" : 400,
+			"Offset-X" : 850,
+			"Offset-Y" : 1100
+		}
+	},
+	"Other": {
+		"Title": "OutPut/Other/Other ",
+		"BaseImage" : "BaseName",
+		"Cols" :[
+			"Id",
+			"Name",
+			"Effect",
+			"BaseName"
+		],
+		"Name" : {
+			"Type" : "Text",
+			"Offset-X" : 100,
+			"Offset-Y" : 1270,
+			"Font" : "input/Verdana.ttf"
+		},
+		"Effect" : {
+			"Type" : "Text",
+			"Offset-X" : 100,
+			"Offset-Y" : 1450,
+			"Font" : "input/Verdana.ttf"
+		}
+	}
+}
