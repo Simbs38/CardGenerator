@@ -4,9 +4,13 @@ From the given input files, the following cards were generated.
 
 ## Event Cards
 
-<img src="https://github.com/Simbs38/CardGenerator/blob/master/OutPut/Events/Event1.png?raw=true" alt="EventCard" width="200"/>
+<div class="inline-block">
+    <img src="https://github.com/Simbs38/CardGenerator/blob/master/OutPut/Events/Event1.png?raw=true" alt="EventCard" width="200"/>
+</div>
 
-<img src="https://github.com/Simbs38/CardGenerator/blob/master/OutPut/Events/Event2.png?raw=true" alt="EventCard" width="200"/>
+<div class="inline-block">
+    <img src="https://github.com/Simbs38/CardGenerator/blob/master/OutPut/Events/Event2.png?raw=true" alt="EventCard" width="200"/>
+</div>
 
 <img src="https://github.com/Simbs38/CardGenerator/blob/master/OutPut/Events/Event3.png?raw=true" alt="EventCard" width="200"/>
 
