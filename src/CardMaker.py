@@ -35,9 +35,9 @@ class CardMaker:
 
 			for part in titleParts:
 				if part in card:
-					ans += str(card[part]).replace(" ","")
+					ans += str(card[part])
 				elif part in confs:
-					ans += str(confs[part]).replace(" ","")
+					ans += str(confs[part])
 				else:
 					print("Information about", part, "was not found")
 
