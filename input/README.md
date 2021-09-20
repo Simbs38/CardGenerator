@@ -47,7 +47,7 @@ The config is a simple json file to hold configurations, and it can be divided i
 
 These fields are used as a fallback for each of the existing elements (text, image and groups). If the field is not defined in the specific tag, them the value defined here is used instead.
 
-```
+```json
 {
     "TextStandart" :
     {
@@ -104,24 +104,29 @@ For each given excel page you are allowed to define all the formating of the fin
     + **Size-Y**:(img only) Defines the heigth of an image.
 
 
-```
+```json
 {
-    "Items": {
+    "Items": 
+    {
 		"Title": "Output/Items/Items",
 		"BaseImage" : "BaseName",
-		"Cols" :[
+		"Cols" :
+        [
 			"Id",
 			"Name",
 			"Info",
 			"Price",
-			"BaseName"],
-		"Name" : {
+			"BaseName"
+        ],
+		"Name" : 
+        {
 			"Type" : "Text",
 			"Offset-X" : 100,
 			"Offset-Y" : 1270,
 			"Font" : "input/Verdana.ttf"
 		},
-		"Info" : {
+		"Info" : 
+        {
 			"Type" : "Text",
 			"Offset-X" : 100,
 			"Offset-Y" : 1450,
@@ -129,7 +134,8 @@ For each given excel page you are allowed to define all the formating of the fin
 			"Line-Spacing" : 10,
 			"Font" : "input/Verdana.ttf"
 		},
-		"Price" : {
+		"Price" : 
+        {
 			"Type" : "Img",
 			"Size-X" : 400,
 			"Size-Y" : 400,
@@ -140,3 +146,4 @@ For each given excel page you are allowed to define all the formating of the fin
 }
 
 ```
+
