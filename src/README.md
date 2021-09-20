@@ -1,6 +1,6 @@
 # Src
 
-The main file uses the code on this folder to execute the features of the program.
+The main.py file uses the classes present on this folder.
 
 The [CardMaker](CardMaker.py) represents the key features of the tool, since it is the main file to build the cards using the helping classes.
 
