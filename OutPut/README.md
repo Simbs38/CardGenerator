@@ -1,6 +1,6 @@
 # Card Results
 
-From the given input files, the following cards were generated.
+From the given input files, the following cards were generated. The number of cards generated is the same as rows filled in in the Data file.
 
 ## Event Cards
 
@@ -27,5 +27,4 @@ From the given input files, the following cards were generated.
     <img src="https://github.com/Simbs38/CardGenerator/blob/master/OutPut/Other/Other1.png?raw=true" alt="OtherCard" width="200"/>
     <img src="https://github.com/Simbs38/CardGenerator/blob/master/OutPut/Other/Other2.png?raw=true" alt="OtherCard" width="200"/>
     <img src="https://github.com/Simbs38/CardGenerator/blob/master/OutPut/Other/Other3.png?raw=true" alt="OtherCard" width="200"/>
-    <img src="https://github.com/Simbs38/CardGenerator/blob/master/OutPut/Other/Other4.png?raw=true" alt="OtherCard" width="200"/>
 </div>
