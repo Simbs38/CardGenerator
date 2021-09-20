@@ -99,8 +99,8 @@ with open('main.tex','w') as f:
     #f.write(content%args.__dict__)
     f.write(pdf)
 
-#cmd = ['pdflatex', '-interaction', 'nonstopmode', 'main.tex']
-cmd = ['pdflatex', 'main.tex']
+cmd = ['pdflatex', '-interaction', 'nonstopmode', 'main.tex']
+#cmd = ['pdflatex', 'main.tex']
 proc = subprocess.Popen(cmd)
 proc.communicate()
 

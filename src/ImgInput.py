@@ -26,7 +26,6 @@ class ImgInput:
 		try:
 			imgToInsert = Image.open(self.configs.ImageFolder + img["Content"])
 			imgToInsert = self.ResizeImage(imgToInsert, img)
-			width, height = baseImage.size
 			(x,y) = self.GetOffSet(img)
 			baseImage.paste(imgToInsert, (x,y), mask=imgToInsert)
 		except Exception as e:
@@ -59,4 +58,4 @@ class ImgInput:
 			return imageToInsert.resize((x,y)) 
 		except Exception as e:
 			print("Error while resizing image: \n" + str(e))
-			return imgToInsert
+			return imageToInsert

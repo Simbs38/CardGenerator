@@ -45,7 +45,7 @@ class GroupInput:
 				return (self.configs.GroupStandart["Center-x"], self.configs.GroupStandart["Center-y"])
 		except Exception as e:
 			print("Error reading group center point: \n" + str(e))
-			return baseImage.size/2
+			return (0,0)
 
 	def GetContent(self, group):
 		try:
