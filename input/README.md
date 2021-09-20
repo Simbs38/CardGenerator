@@ -30,15 +30,15 @@ The config is a simple json file to hold configurations, and it can be divided i
 ```json
 
 {
-	"Data": "input/data.xlsx",
-	"CardsName": "Title, Id",
-	"ImageFolder" : "input/images/",
+    "Data": "input/data.xlsx",
+    "CardsName": "Title, Id",
+    "ImageFolder" : "input/images/",
     "CardsToGenerate":
     [
-		"Events",
-		"Items",
-		"Other"
-	]
+        "Events",
+        "Items",
+        "Other"
+    ]
 }
 
 ```
@@ -69,7 +69,7 @@ These fields are used as a fallback for each of the existing elements (text, ima
         "Center-y": 200,
         "Direction" : "Hor",
         "Padding" : 10
-	}
+    }
 }
 ```
 
@@ -108,41 +108,41 @@ For each given excel page you are allowed to define all the formating of the fin
 {
     "Items": 
     {
-		"Title": "Output/Items/Items",
-		"BaseImage" : "BaseName",
-		"Cols" :
+        "Title": "Output/Items/Items",
+        "BaseImage" : "BaseName",
+        "Cols" :
         [
-			"Id",
-			"Name",
-			"Info",
-			"Price",
-			"BaseName"
+            "Id",
+            "Name",
+            "Info",
+            "Price",
+            "BaseName"
         ],
-		"Name" : 
+        "Name" : 
         {
-			"Type" : "Text",
-			"Offset-X" : 100,
-			"Offset-Y" : 1270,
-			"Font" : "input/Verdana.ttf"
-		},
-		"Info" : 
+            "Type" : "Text",
+            "Offset-X" : 100,
+            "Offset-Y" : 1270,
+            "Font" : "input/Verdana.ttf"
+        },
+        "Info" : 
         {
-			"Type" : "Text",
-			"Offset-X" : 100,
-			"Offset-Y" : 1450,
-			"Line-Length" : 25,
-			"Line-Spacing" : 10,
-			"Font" : "input/Verdana.ttf"
-		},
-		"Price" : 
+            "Type" : "Text",
+            "Offset-X" : 100,
+            "Offset-Y" : 1450,
+            "Line-Length" : 25,
+            "Line-Spacing" : 10,
+            "Font" : "input/Verdana.ttf"
+        },
+        "Price" : 
         {
-			"Type" : "Img",
-			"Size-X" : 400,
-			"Size-Y" : 400,
-			"Offset-X" : 850,
-			"Offset-Y" : 1100
-		}
-	}
+            "Type" : "Img",
+            "Size-X" : 400,
+            "Size-Y" : 400,
+            "Offset-X" : 850,
+            "Offset-Y" : 1100
+        }
+    }
 }
 
 ```
