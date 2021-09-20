@@ -1,4 +1,4 @@
-from PIL import Image, ImageDraw, ImageFont
+from PIL import ImageDraw, ImageFont
 import textwrap
 import pandas as pd
 
