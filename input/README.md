@@ -27,13 +27,14 @@ The config is a simple json file to hold configurations, and it can be divided i
 
 + **CardsToGenerate**: Specifies the excel pages to be read and parsed. If the title of a page is not in this section, its output will not be produced
 
-```
+```json
 
 {
 	"Data": "input/data.xlsx",
 	"CardsName": "Title, Id",
 	"ImageFolder" : "input/images/",
-    "CardsToGenerate":[
+    "CardsToGenerate":
+    [
 		"Events",
 		"Items",
 		"Other"
