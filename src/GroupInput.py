@@ -17,6 +17,8 @@ class GroupInput:
 						tmp = card[var].replace(" ","")
 						allGroups[var]["Content"] = tmp
 
+		print(len(allGroups))
+
 		for group in allGroups:
 			self.InsertGroup(allGroups[group])
 
