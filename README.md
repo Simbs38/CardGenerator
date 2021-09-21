@@ -33,9 +33,8 @@ pip install xlrd
 pip install openpyxl
 pip install Pillow
 pip install pandas
+pip install pylatex
 ```
-
-To run the pdf features you will also need to [install latex](https://www.latex-project.org/get/) locally.
 
 ## Configuring to your project
 
