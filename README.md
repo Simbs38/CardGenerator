@@ -24,6 +24,13 @@ To help you getting started the project is presented with a sample files. To exe
 python main.py input/config.json
 ```
 
+To generate the Pdf file holding all the cards, use:
+
+```
+python main.py input/config.json -pdf
+
+```
+
 ## Dependencys
 
 To run the project you will need to install the following packages:
